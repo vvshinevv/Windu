@@ -1,0 +1,383 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="100"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="8"
+            android:background="#4fc1cb"
+            android:weightSum="100">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:textSize="40dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="15"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_weight="40"
+                android:src="@drawable/icon_wind_logo"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="10"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="62"
+            android:weightSum="100">
+
+            <org.wind.projectwindb.ScreenViewFlipper
+                android:id="@+id/screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="30"
+            android:weightSum="150">
+
+            <Button
+                android:text="도움요청"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="50"
+                android:background="#b0e0e6"
+                android:onClick="helpRequestToOthers"
+                />
+
+            <Button
+                android:text="도움주기"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="50"
+                android:background="#add8e6"
+                android:onClick="helpOthers"
+                />
+
+            <Button
+                android:text="도움목록"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="50"
+                android:background="#87cefa"
+                android:onClick="helpList"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--슬라이딩!!!!!!!!-->
+    <LinearLayout
+        android:id="@+id/slidingPage1"
+        android:orientation="vertical"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#313535"
+        android:visibility="gone"
+        android:weightSum="100"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="0px"
+            android:layout_weight="35"
+            android:gravity="center"
+            >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ImageView_slidingpage_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="profileOnclicked"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImage="@drawable/tempimage" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="10"
+            android:weightSum="100"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홍길동"
+                android:textSize="30dp"
+                android:textColor="#c6cfcf"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:weightSum="100"
+            android:layout_marginTop="15dp"
+            >
+            <ImageView
+                android:id="@+id/ImageView_slidingpage_gradeIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="15"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="100"
+            >
+            <LinearLayout
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Level"
+                    android:textColor="#c6cfcf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:text="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#c6cfcf"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/pbProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:secondaryProgress="50" />
+
+            <TextView
+                android:id="@+id/tvTotalStateOfExp"
+                android:text="(10/100)"
+                android:textColor="#c6cfcf"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:onClick="reviewbuttonclicked"
+            >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ImageView_userinfosettings2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+                fresco:placeholderImage="@drawable/icon_mypage_review" />
+
+            <LinearLayout
+                android:id="@+id/llConfirmMyReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ImageView_userinfosettings2"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="내가 받은"
+                    android:textSize="15dp"
+                    android:textColor="#83dce2"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="리뷰 확인하기"
+                    android:textSize="15dp"
+                    android:textColor="#83dce2"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:onClick="userinfobuttonclicked"
+            >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ImageView_userinfosettings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                fresco:placeholderImage="@drawable/icon_userinfosetting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/ImageView_userinfosettings"
+                android:text="개인정보수정"
+                android:textSize="20dp"
+                android:textColor="#83dce2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:onClick="settingOnclicked"
+            >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ImageView_settings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                fresco:placeholderImage="@drawable/icon_setting" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/ImageView_settings"
+                android:text="설정"
+                android:textSize="20dp"
+                android:textColor="#83dce2"
+                android:paddingLeft="5dp"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/Administrator"
+            android:onClick="AskToAdministrator"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="관리자에게 문의하기"
+                android:textSize="20dp"
+                android:textColor="#83dce2"
+                android:paddingLeft="5dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left"
+        android:weightSum="100"
+        >
+
+        <LinearLayout
+            android:id="@+id/slidbuttonpage"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="8">
+            <ImageButton
+                android:id="@+id/slidingbutton"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_mypage_slide"
+                android:onClick="onSlidingbtnClicked"
+                android:scaleType="fitCenter"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

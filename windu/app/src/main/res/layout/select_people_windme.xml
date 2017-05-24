@@ -1,0 +1,380 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#4fc1cb"
+        android:weightSum="100"
+
+        >
+        <TextView
+            android:id="@+id/Button_selectPeoplewindme_backbutton"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="15"
+            android:text="&lt;"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="25dp"
+            android:layout_weight="58" />
+
+
+            <!--
+        <EditText
+            android:id="@+id/EditText_SelectPeopleWindme_Category"
+            android:layout_width="0px"
+            android:layout_height="25dp"
+            android:layout_weight="58"
+            android:background="#269ea8"
+            android:layout_gravity="center"
+            android:hint="카테고리를 검색해주세요."
+            android:textColorHint="#4fc1cb"
+            android:textSize="12dp"
+            android:gravity="center"
+            />
+            -->
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:id="@+id/Textview_SelectPeopleWindme_Send"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:textSize="15dp"
+            android:text="보내기"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            />
+    </LinearLayout> <!-- 위에 부분 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_weight="10"
+        android:background="#ffffff"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvTextView1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="현재 위치"
+                android:textColor="#000000"
+                android:gravity="center_vertical"
+                android:textSize="12dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/linerLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvTextView1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/locationsettingtemp"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/icon_locationsetting_gps_mark"
+                    />
+
+                <TextView
+                    android:id="@+id/TextView_settinglocation_locationtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="zz"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다른 위치를 선택하시거나 위치변경시\r\n다른 위치 버튼을 선택하세요."
+                android:textColor="#000000"
+                android:gravity="top"
+                android:layout_marginLeft="15dp"
+                android:textSize="15dp"
+                android:layout_below="@+id/linerLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            >
+            <Button
+                android:id="@+id/bSelectOtherLocation"
+                android:layout_width="100sp"
+                android:layout_height="90dp"
+                android:text="다른 위치"
+                android:textSize="15dp"
+                android:layout_marginRight="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <!--<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#ebebeb"
+        android:weightSum="100"
+        android:padding="4dp"
+        android:gravity="center"
+        >
+        <ToggleButton
+            android:id="@+id/ToggleButton_selectpeoplewindme_alignbutton"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selectpeoplewindme_switchbuttondesign"
+            android:state_checked="false"
+            android:textOn=""
+            android:textOff=""
+            />
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/linCurrentPerson"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="4"
+        android:background="#c3dbdf"
+        android:gravity="center"
+        android:weightSum="100">
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"/>
+        <TextView
+            android:text="선택 가능한 인원"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"/>
+        <TextView
+            android:text=":"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"/>
+        <TextView
+            android:id="@+id/tvMayChoosePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+
+            android:text="3"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+
+            android:text="명"
+            android:textColor="#ffffff"/> <!--명-->
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+
+            android:text="/"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"/>
+        <TextView
+            android:text="현재 선택한 인원"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"/>
+        <TextView
+            android:text=":"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"/>
+        <TextView
+            android:id="@+id/tvChoosingPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="0"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="명"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#c2c2c2"
+        ></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#c2c2c2"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="4"
+        android:background="#c3dbdf"
+        android:weightSum="100">
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"/>
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="18"
+            android:src="@drawable/icon_selectpeoplewindme_list"
+            android:padding="3dp"
+            />
+
+
+        <!--
+        <TextView
+            android:id="@+id/TextView_selectpeoplewindme_Choosed_PeopleNumber"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:text="0"
+            android:textSize="18dp"
+            android:textColor="#269ea8"
+            android:gravity="right"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:text="/"
+            android:textSize="12dp"
+            android:textColor="#6e9da5"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            />
+        <TextView
+            android:id="@+id/TextView_selectpeoplewindme_ChoosablePeopleNumber"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:text="0"
+            android:textSize="12dp"
+            android:textColor="#6e9da5"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            /> -->
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Layout_SelectPeopleWindme_List"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="74.5"
+        android:background="#ffffff"
+        android:weightSum="100">
+
+        <ListView
+            android:id="@+id/ListView_SelectPeopleWindme_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

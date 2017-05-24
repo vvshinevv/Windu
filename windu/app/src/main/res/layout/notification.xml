@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@drawable/icon_wind8686"/>
+
+    <TextView android:id="@+id/noti_text"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:textColor="#000"
+        />
+</LinearLayout>

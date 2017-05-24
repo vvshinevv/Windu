@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#ebebeb"
+    android:weightSum="100">
+
+    <ListView
+        android:id="@+id/ListView_Chatbox_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ebebeb"
+        >
+
+    </ListView>
+
+
+</LinearLayout>

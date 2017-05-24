@@ -1,0 +1,300 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#ebebeb"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#4fc1cb"
+        android:weightSum="100"
+
+        >
+        <TextView
+            android:id="@+id/Button_SendHelpMe_backbutton"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="15"
+            android:text="&lt;"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="25dp"
+            android:layout_weight="58"
+            android:layout_gravity="center"
+            android:text="요청 보내기"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:background="#ebebeb"
+        android:weightSum="100"
+        android:padding="4dp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="6"
+        android:background="#ebebeb"
+        android:weightSum="100"
+        android:padding="4dp"
+        >
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="100"
+            android:text="요청 받는 분"
+            android:textSize="17dp"
+            android:paddingLeft="15dp"
+            android:textColor="#686868"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="7"
+        android:background="#ebebeb"
+        android:weightSum="100"
+        android:padding="4dp"
+        >
+        <RelativeLayout
+            android:id="@+id/LinearLayout_SendHelpMe_PeopleNikBoard1"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="70"
+            android:weightSum="90"
+            >
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="30"
+            android:weightSum="100"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:text="총"
+                android:textColor="#686868"
+                android:textSize="15dp"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="20"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/TextView_SendHelpMe_peopleCnt"
+                android:text="0"
+                android:textColor="#2fa3ad"
+                android:textSize="25dp"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="25"
+                android:gravity="center_vertical|right"
+                android:paddingTop="4dp"
+                />
+            <TextView
+                android:text="명"
+                android:textColor="#686868"
+                android:textSize="15dp"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="20"
+                android:paddingLeft="3dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="7"
+        android:background="#ebebeb"
+        android:weightSum="100"
+        android:padding="4dp"
+        >
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="100"
+            android:text="요청 메세지 작성"
+            android:textSize="17dp"
+            android:paddingLeft="15dp"
+            android:textColor="#686868"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="25"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/EditText_SendHelpMe_MSG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:layout_weight="100"
+            android:lines="15"
+            android:maxLength="120"
+            android:gravity="top"
+            android:background="@drawable/image_messagebox"
+            android:padding="8dp"
+            android:hint="최대 글자 수 140자 내외 (띄어쓰기, 특수기호 포함)"
+            android:textSize="13dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="15"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="100"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/Button_SendHelpMe_Send"
+            android:background="#4fc1cb"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:textSize="25dp"
+                android:text="보내기"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="+10 EXP"
+                android:textSize="15dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="30"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="100"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:text="안내"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/question"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:text="○ 도움 요청시 경험치 10을 획득할 수 있으며, 획득한"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  경험치가 누적되면 회원 레벨이 상승 합니다."
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="○ 선택한 사람들에게 도움이 요청됩니다. 요청하신"
+            android:textSize="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  도움은 도움목록에서 확인 할 수 있습니다."
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="○ 요청된 도움은 요청받은 사용자가 수락을 해야만"
+            android:layout_marginTop="3dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  커뮤니케이션이 가능합니다."
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</LinearLayout>

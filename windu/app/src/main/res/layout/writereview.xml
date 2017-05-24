@@ -1,0 +1,310 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#4fc1cb"
+        android:weightSum="100"
+
+        >
+        <TextView
+            android:id="@+id/TextView_writeReview_backButton"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:textSize="15dp"
+            android:paddingLeft="15dp"
+            android:text="취소"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="25dp"
+            android:layout_weight="58"
+            android:layout_gravity="center"
+            android:text="리뷰 작성하기"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:weightSum="100"
+        android:padding="4dp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="20"
+        android:background="#ffffff"
+        android:weightSum="100"
+        android:padding="4dp"
+        >
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ImageView_selectpeoplelist_profile"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImage="@drawable/tempimage" />
+            <ImageView
+                android:id="@+id/ImageView_selectpeoplelist_grade"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/ImageView_selectpeoplelist_profile"
+                android:layout_alignRight="@+id/ImageView_selectpeoplelist_profile"
+                android:padding="5dp"
+                android:src="@drawable/grade1_icon"
+                android:background="@drawable/icon_selectpeoplelist_grade_bg"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="75"
+            android:weightSum="100"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20px"
+                android:layout_weight="30"
+                android:gravity="bottom"
+                android:weightSum="100"
+                >
+                <TextView
+                    android:id="@+id/TextView_writeReview_Nickname"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="닉네임"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="#46a7b0"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0px"
+                android:layout_weight="70"
+                >
+                <RatingBar android:id="@+id/Ratingbar_writereview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/starRatingBar"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_marginTop="20dp"
+                    android:numStars="5"
+                    android:rating="3.7"
+                    android:stepSize="0.1"
+                    />
+                <TextView
+                    android:id="@+id/TextView_WriteReview_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Ratingbar_writereview"
+                    android:text="4"
+                    android:textSize="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:textColor="#3cb3e2"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/TextView_WriteReview_value"
+                    android:text="/5"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="25"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/EditText_WriteReview_MSG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:layout_weight="100"
+            android:lines="15"
+            android:maxLength="120"
+            android:gravity="top"
+            android:background="@drawable/image_messagebox"
+            android:padding="8dp"
+            android:hint="최대 글자 수 140자 내외 (띄어쓰기, 특수기호 포함)"
+            android:textSize="13dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="15"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="100"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/TextView_writeReview_SendButton"
+            android:background="#4fc1cb"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="70dp">
+            <TextView
+                android:textSize="25dp"
+                android:text="도움완료"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="+25 EXP"
+                android:textSize="15dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="30"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="100"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:text="안내"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/question"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+        </LinearLayout>
+        <TextView
+            android:text="○ 리뷰 작성시 경험치 25를 획득할 수 있으며, 획득한 경험치가 "
+            android:textSize="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  누적되면 회원 레벨이 상승 합니다."
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="○ 리뷰는 도움을 제공한 사용자에게 리뷰 별점에 따른 경험치가 "
+            android:textSize="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  누적되며, 평가된 별점은 사용자를 판단하는 기준이 될 수"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  있습니다."
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:text="○ 요청된 도움은 요청받은 사용자가 수락을 해야만 커뮤니케이션"
+            android:textSize="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="  이 가능합니다."
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

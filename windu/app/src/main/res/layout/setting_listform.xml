@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="#9ad5db"
+    android:gravity="center_vertical"
+    android:id="@+id/setting_list_item"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+        <ImageView
+            android:id="@+id/ImageView_setting_listview_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_setting_gps_logo"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+        <TextView
+            android:id="@+id/TextView_setting_listview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="알림 위치 설정"
+            android:textSize="13dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/ImageView_setting_listview_icon"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+</RelativeLayout>

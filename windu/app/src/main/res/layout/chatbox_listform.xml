@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:weightSum="100"
+    android:id="@+id/Layout_listview">
+    <RelativeLayout
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="100"
+        android:paddingTop="10dp"
+        android:background="#ebebeb"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ImageView_Chatbox_profile_you"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@drawable/tempimage" />
+
+
+
+        <TextView
+            android:id="@+id/TextView_Chatbox_Nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12dp"
+            android:paddingLeft="10dp"
+            android:textColor="#46a7b0"
+            android:layout_toRightOf="@+id/ImageView_Chatbox_profile_you"
+            />
+        <TextView
+            android:id="@+id/TextView_Chatbox_MSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12dp"
+            android:maxWidth="250dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:layout_below="@+id/TextView_Chatbox_Nickname"
+            android:layout_toRightOf="@+id/ImageView_Chatbox_profile_you"
+            android:background="@drawable/image_you_chatbox"
+            android:maxLength="1000"
+            android:maxLines="30"
+            />
+        <TextView
+            android:id="@+id/TextView_Chatbox_DateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textSize="5dp"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:layout_toRightOf="@+id/TextView_Chatbox_MSG"
+            android:layout_alignBottom="@+id/TextView_Chatbox_MSG"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

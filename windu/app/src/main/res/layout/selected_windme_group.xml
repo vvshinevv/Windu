@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#ebebeb"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#4fc1cb"
+        android:weightSum="100">
+        <TextView
+            android:id="@+id/TextView_SelectedWindmeGroup_backButton"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:text="  &lt;"
+            android:textSize="40dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+
+        />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="15"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:src="@drawable/wind_me_logo"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="15"
+        android:background="#ebebeb"
+        android:weightSum="100">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="20">
+            <TextView
+                android:id="@+id/alignTV"
+                android:layout_width="120dp"
+                android:layout_height="fill_parent" />
+            <ImageView
+                android:id="@+id/ImageView_grouplist_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@+id/alignTV"
+                android:padding="3dp"
+                android:src="@drawable/icon_group"
+                />
+            <TextView
+                android:id="@+id/alignTV2"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignRight="@+id/alignTV2"
+                android:layout_alignBottom="@+id/alignTV2"
+                android:src="@drawable/icon_review_count"
+                />
+            <TextView
+                android:id="@+id/TextView_grouplist_member_count"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_alignRight="@+id/alignTV2"
+                android:layout_alignBottom="@+id/alignTV2"
+                android:textColor="#ffffff"
+                android:text="99+"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:weightSum="100">
+            <TextView
+                android:id="@+id/TextView_SelectedWindmeGroup_ThisHelpMSG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@drawable/image_you_chatbox"
+                android:text=""
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:background="#c3dbdf"
+        />
+    <LinearLayout
+        android:id="@+id/Layout_SelectedWindmeGroup_list"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="76"
+        />
+
+</LinearLayout>

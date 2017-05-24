@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="8"
+        android:background="#4fc1cb"
+        android:weightSum="100"
+
+        >
+        <TextView
+            android:id="@+id/TextView_setting_submitButton"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="15"
+            android:textSize="15dp"
+            android:paddingLeft="15dp"
+            android:text="확인"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="25dp"
+            android:layout_weight="58"
+            android:layout_gravity="center"
+            android:text="설정"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="92">
+
+        <RelativeLayout
+            android:id="@+id/Layout_setting_Location"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/settingtemp_icon"
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_setting_gps_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="알림 위치 설정"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="#686868"
+                android:layout_toRightOf="@+id/settingtemp_icon"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_userinfo_next_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#9ad5db"
+            android:gravity="center_vertical"
+            android:descendantFocusability="blocksDescendants"
+            >
+            <ListView
+                android:id="@+id/ListView_setting_locationTable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Layout_setting_time"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/settingtemp_icon2"
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_setting_watch_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="알림 시간 설정"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="#686868"
+                android:layout_toRightOf="@+id/settingtemp_icon2"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_userinfo_next_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#9ad5db"
+            android:gravity="center_vertical"
+            android:descendantFocusability="blocksDescendants"
+            >
+            <ListView
+                android:id="@+id/ListView_setting_TimeTable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Layout_setting_category"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/settingtemp_icon3"
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_setting_category_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="카테고리 설정"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="#686868"
+                android:layout_toRightOf="@+id/settingtemp_icon3"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_userinfo_next_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#9ad5db"
+            android:descendantFocusability="blocksDescendants"
+            >
+            <ListView
+                android:id="@+id/ListView_setting_CategoryTable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#ffffff"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

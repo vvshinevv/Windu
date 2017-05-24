@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:weightSum="100"
+    android:id="@+id/Layout_listview">
+    <RelativeLayout
+
+        android:layout_width="0px"
+        android:layout_height="100dp"
+        android:layout_weight="25"
+        android:gravity="center"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ImageView_SelectedWindmeGroup_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@drawable/tempimage" />
+        <ImageView
+            android:id="@+id/ImageView_SelectedWindmeGroup_grade"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/ImageView_SelectedWindmeGroup_profile"
+            android:layout_alignLeft="@+id/ImageView_SelectedWindmeGroup_profile"
+            android:layout_marginLeft="60dp"
+            android:padding="5dp"
+            android:src="@drawable/grade1_icon"
+            android:background="@drawable/icon_selectpeoplelist_grade_bg"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0px"
+        android:layout_height="fill_parent"
+        android:layout_weight="75"
+        android:weightSum="100"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="20px"
+            android:layout_weight="30"
+            android:gravity="bottom"
+            android:weightSum="100"
+            >
+            <TextView
+                android:id="@+id/TextView_SelectedWindmeGroup_Nickname"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                android:text="닉네임"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:textColor="#46a7b0"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="60"
+            >
+            <TextView
+                android:id="@+id/TextView_SelectedWindmeGroup_Category"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                android:text="#카테고리"
+                android:textSize="14dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:maxLength="50"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/ImageView_SelectedWindmeGroup_blindviewer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+</RelativeLayout>
